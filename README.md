@@ -51,28 +51,9 @@ The sidebar shuffle button now has only two states: **Off ↔ Shuffle**. Off use
 
 The sidebar displays up to ten upcoming items. Double-clicking an item advances through Spotify's existing queue, while dragging items deliberately rebuilds the visible queue order. These existing manual queue controls are independent of Shuffle.
 
-## Plugin Hub compatibility
-
-This candidate uses Spotify's HTTPS Web API and, only when **Overlay lyrics** is enabled, LRCLIB's HTTPS lyrics API. Windows media-session support remains exclusive to the separate local build because it launches a PowerShell helper and uses native Windows APIs, which are not suitable for RuneLite Plugin Hub review.
-
-The repository has no non-RuneLite runtime dependencies and uses `build=standard` in `runelite-plugin.properties`. Lyrics are disabled by default behind a third-party-service warning. Search uses Spotify's catalog and playback endpoints only after a user action. Shuffle uses Spotify's standard playback-state endpoint only; it does not add or replace queue items.
 
 ## Privacy
 
 Spotify access and lyrics access are independent opt-in settings. A submitted search sends the text you entered to Spotify and downloads the returned album-cover images from Spotify's HTTPS image hosts for display. Lyrics lookup sends the current track title, artist, album, duration, and your network IP address to LRCLIB. The plugin does not send RuneScape account, player, chat, or game-state data and does not record or upload audio.
 
-## Development
 
-Use Java 11 and run:
-
-```text
-./gradlew run
-```
-
-Run tests with:
-
-```text
-./gradlew clean test
-```
-
-The `shadowJar` task is included only to create the separate local Windows development client supplied with this source. RuneLite Plugin Hub builds the reviewed source itself and does not accept that development client.
