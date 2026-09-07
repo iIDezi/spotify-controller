@@ -24,8 +24,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @PluginDescriptor(
-	name = "Media Controller",
-	description = "Control Spotify playback, search, queue, artwork, and optional lyrics from RuneLite",
+	name = "Spotify Controller",
+	description = "Control Spotify from RuneLite with playback controls, search, queue, artwork, and lyrics",
 	tags = {"spotify", "music", "media", "now playing"}
 )
 public class SpotifyControllerPlugin extends Plugin
@@ -147,7 +147,7 @@ public class SpotifyControllerPlugin extends Plugin
 		panel.setOverlayLyricsVisible(config.showOverlayLyrics());
 		panel.setOverlayLyricsLines(config.overlayLyricsLines());
 		navigationButton = NavigationButton.builder()
-			.tooltip("Media Controller")
+			.tooltip("Spotify Controller")
 			.icon(createMusicIcon())
 			.priority(6)
 			.panel(panel)
@@ -156,7 +156,7 @@ public class SpotifyControllerPlugin extends Plugin
 		overlayManager.add(spotifyOverlay);
 		mouseManager.registerMouseListener(overlayMouseListener);
 		startPlaybackSources();
-		log.debug("Media Controller started");
+		log.debug("Spotify Controller started");
 	}
 
 	@Override
@@ -195,7 +195,7 @@ public class SpotifyControllerPlugin extends Plugin
 			panel.stop();
 			panel = null;
 		}
-		log.debug("Media Controller stopped");
+		log.debug("Spotify Controller stopped");
 	}
 
 	@Subscribe

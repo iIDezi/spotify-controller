@@ -1663,10 +1663,10 @@ final class SpotifyApiClient
 
 	private static void writeBrowserResponse(Socket socket, int status, String message) throws IOException
 	{
-		String html = "<!doctype html><html><head><meta charset=\"utf-8\"><title>RuneLite Media Controller</title>" +
+		String html = "<!doctype html><html><head><meta charset=\"utf-8\"><title>RuneLite Spotify Controller</title>" +
 			"<style>body{background:#121212;color:#fff;font:18px sans-serif;display:grid;place-items:center;height:100vh;margin:0}" +
 			"main{max-width:560px;text-align:center;padding:32px}.logo{color:#1db954;font-size:48px}</style></head>" +
-			"<body><main><div class=\"logo\">●</div><h1>RuneLite Media Controller</h1><p>" + message +
+			"<body><main><div class=\"logo\">●</div><h1>RuneLite Spotify Controller</h1><p>" + message +
 			"</p></main></body></html>";
 		byte[] content = html.getBytes(StandardCharsets.UTF_8);
 		BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream(), StandardCharsets.US_ASCII));

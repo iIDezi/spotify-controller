@@ -1339,7 +1339,7 @@ final class SpotifyPanel extends PluginPanel
 		}
 
 		Window owner = SwingUtilities.getWindowAncestor(this);
-		JDialog dialog = new JDialog(owner, "About Media Controller", Dialog.ModalityType.MODELESS);
+		JDialog dialog = new JDialog(owner, "About Spotify Controller", Dialog.ModalityType.MODELESS);
 		dialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 		dialog.setResizable(true);
 
@@ -1348,7 +1348,7 @@ final class SpotifyPanel extends PluginPanel
 		content.setBackground(PANEL_BACKGROUND);
 		content.setBorder(BorderFactory.createEmptyBorder(18, 20, 18, 20));
 
-		JLabel heading = new JLabel("Media Controller");
+		JLabel heading = new JLabel("Spotify Controller");
 		heading.setAlignmentX(Component.CENTER_ALIGNMENT);
 		heading.setForeground(sidebarAccent());
 		heading.setFont(FontManager.getRunescapeBoldFont().deriveFont(18f));

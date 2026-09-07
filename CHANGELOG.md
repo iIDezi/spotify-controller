@@ -145,9 +145,9 @@
 - Removed the PowerShell/native Windows-media fallback from the Plugin Hub candidate.
 - Removed the Player Indicators Plus code, configuration, and launcher from this project.
 - Removed the Lombok build dependency.
-# Media Controller 1.25.0
+# Spotify Controller 1.25.0
 
-- Renamed the user-facing plugin from Spotify Controller to Media Controller.
+- Kept the Spotify Controller name for the Spotify-only Plugin Hub build.
 - Removed the beta notice, Discord feedback button, and Discord link.
 - Kept the Plugin Hub edition Spotify-only; Windows media-session support remains in the separate local build.
 - Updated Plugin Hub metadata and authorship to iiDezi.
